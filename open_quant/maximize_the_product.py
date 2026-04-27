@@ -10,17 +10,20 @@ What is the expected value with optimal play?
 
 import numpy as np
 
-n = 0
-N = 1000000
+n1 = 0
+n2 = 0
+N = 100000
 
 for _ in range(N):
-    d1, d2 = np.random.choice(list(range(1, 7)), size=2, replace=True)
-    product = d1 * d2
+    rolls = np.random.choice(list(range(1, 7)), size=2, replace=True)
+    d1, d2 = max(rolls), min(rolls)
 
-    if product < 12.25:
-        d1 = max(d1, d2)
+    n1 += d1 * d2
+    
+    if d2 < 3.5: 
         d2 = np.random.choice(list(range(1, 7)))
 
-    n += d1 * d2
+    n2 += d1 * d2
 
-print(f"Expected product with 1 reroll = {n/N}")
+print(f"1) Expected product without reroll = {n1/N}")
+print(f"2) Expected product with 1 reroll = {n2/N}")
