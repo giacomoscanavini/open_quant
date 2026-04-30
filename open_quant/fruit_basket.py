@@ -8,7 +8,7 @@ and 1 peach in the basket after you've taken out all the apples?
 
 import numpy as np
 
-N = 1_000_000
+N = 100_000
 P = 0
 
 rng = np.random.default_rng(5)
