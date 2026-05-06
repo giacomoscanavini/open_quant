@@ -8,7 +8,6 @@ This game consists of 100 turns where you must either place or take.
 Assuming optimal play, what is the expected payoff of this game?
 """
 
-import numpy as np
 import scipy
 
 func = lambda N: - N * (1 - (1/2)**(100 - N))
@@ -16,4 +15,3 @@ func = lambda N: - N * (1 - (1/2)**(100 - N))
 best_N = scipy.optimize.minimize(func, 0, method='BFGS')
 
 print(f"Best value for N is {round(best_N['x'][0])}")
-
