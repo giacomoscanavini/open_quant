@@ -4,7 +4,7 @@ This folder contains scripts for numerically solving problems from the **OpenQua
 
 The goal of this folder is to provide reproducible, code-based solutions to the problems provided by the website approaches on topics including probability, statistics, optimization, stochastic processes, numerical methods, and other topics commonly encountered in quantitative finance and technical interview preparation.
 
-Note that not all problems require a numerical solution so some are missing.
+Note that not all problems require a numerical solution proof or optimization result so some might be missing.
 
 ## Purpose
 
